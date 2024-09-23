@@ -1,0 +1,33 @@
+﻿def add_everything_up(a, b):
+    return a + b
+
+result = add_everything_up(123.456, 4215)
+print(result)
+
+# Попробуем сложить строки
+result = add_everything_up("строка", "яблоко")
+print(result)
+
+
+try:
+    result = "Число" + 4215  # TypeError
+except TypeError:
+    add_everything_up_result = "Число" + str(4215)
+    numbers = [123.456, 4215, 7]
+    report = ["Число: " + str(number) for number in numbers]
+    for i in range(5):
+        print(f"Счёт: {i}")
+else:
+    result = "Строка" + "Яблоко"
+
+
+try:
+    result = "Строка" + "Яблоко"
+except TypeError:
+    add_everything_up_result = "Строка" + str("Яблоко")
+    lines = ["строка", "яблоко"]
+    for line in lines:
+        print("Строка: " + str(line))
+    report = ["Строка: " + str(line) for line in lines]
+    for i in range(5):
+        print(f"Счёт: {i}")
